@@ -15,7 +15,7 @@ workflows:
           filters: *filters
       - maven/parallel_test: 
           app_src_directory: sample_app2
-          command: test -DforkCount=4
+          command: mvn test -B -Dsurefire.excludesFile=surefire_classnames_ignore_list -Dfailsafe.excludesFile=failsafe_classnames_ignore_list
           test_results_path: target/surefire-reports
           filters: *filters
       
