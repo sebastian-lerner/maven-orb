@@ -23,3 +23,5 @@ circleci tests glob "$PARAM_TEST_DIR"/"$PARAM_IT_PATTERN" | \
 
 echo .circleci/tests/failsafe_classnames | circleci tests run --command=">/tmp/this_node_it_tests xargs echo" --split-by=timings --timings-type=classname --verbose
 grep -xvf /tmp/this_node_it_tests < .circleci/tests/failsafe_classnames > .circleci/tests/failsafe_classnames_ignore_list
+
+echo "this is a test orb"
