@@ -6,6 +6,7 @@ echo -e "\033[31m\033[4mOrb Notes on Test Splitting\033[0m
         These values are appended to any -DincludeFiles argument (meaning it would still run all tests on every node).
         Therefore this orb will generate an exclusion list; a list of tests being run on the other nodes, and pass that to surefire/failsafe as an exclusion.
         \033[34mDebugging:\033[0m This orb will place all files used to decide tests in .circleci/tests and export it as an artifact for inspection/debugging.
+        test
         "
 mkdir -p .circleci/tests/
 # generate excluded surefire tests using provided pattern
